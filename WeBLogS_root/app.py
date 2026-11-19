@@ -1,13 +1,13 @@
-from flask import Flask
+from flask import Flask, render_template as rt
 app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "<h1>Hola Amigos!!<h1>"
+    return rt("home.html")
 
 @app.route("/about")
 def about():
-    return "<h1>About Page</h1>"
+    return rt("about.html")
 
 # localhost is equivalent to 127.0.0.1
 if __name__ == "__main__":
