@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    <h1>Hola Amigos!!<h1></h1>
+{% extends "layout.html" %}
+{% block content %}
+    <h1 align="center">W<sub>E</sub>.B.L<sub>O</sub>G.S.</h1>
+    <br><br>
     {% for post in posts %}
         <h1>{{ post.title }}</h1>
-        <p>~By {{ post.author }} <br> &nmsp; On: {{ post.date_of_post }}</p>
+        <p>~ By <b>{{ post.author }},</b> <br> &emsp; Posted On: <b>{{ post.date_of_post }}</b></p>
+        <hr>
     {% endfor %}
-</body>
-</html>
+{% endblock content %}

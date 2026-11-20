@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcd.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+
+    {% if title %}
+        <title>W<sub>E</sub>B.L<sub>O</sub>G.S - {{ title }}</title>
+    {% else %}
+        <title>Home</title>
+    {% endif %}
+</head>
+<body>
+    {% block content %} {% endblock %}
+    <!-- Optional Javascript -->
+</body>
+</html>
