@@ -3,8 +3,15 @@
     <h1 align="center">W<sub>E</sub>.B.L<sub>O</sub>G.S.</h1>
     <br><br>
     {% for post in posts %}
-        <h1>{{ post.title }}</h1>
-        <p>~ By <b>{{ post.author }},</b> <br> &emsp; Posted On: <b>{{ post.date_of_post }}</b></p>
-        <hr>
+        <article class="media content-section">
+          <div class="media-body">
+            <h2><a class="article-title" href="{{ url_for('article', filename=post.content_file) }}">{{ post.title }}</a></h2>
+            <div class="article-metadata text-right">
+                <i><a href="#">~{{ post.author }}</a>
+                &emsp; <small class="text-muted">{{ post.date_of_post }}</small></i>
+            </div>
+            <p class="article-content">{{ post.content }}</p>
+          </div>
+        </article>
     {% endfor %}
 {% endblock content %}
